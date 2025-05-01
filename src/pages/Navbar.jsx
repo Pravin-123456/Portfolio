@@ -15,7 +15,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="text-white fixed top-0 left-0 w-full px-5 md:px-24 py-4 z-50">
+    <div className="text-white fixed top-0 left-0 w-full px-5 md:px-24 py-10 z-50">
       <div className="flex justify-between items-center">
         <h1 className="font-bold text-xl">PRAVIN</h1>
         <RxHamburgerMenu

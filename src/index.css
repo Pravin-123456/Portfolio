@@ -5,3 +5,11 @@
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
 }
+
+@layer utilities {
+  .fade-bottom {
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+}
+

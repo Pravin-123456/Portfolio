@@ -1,5 +1,6 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import PageCount from "../components/PageCount";
 
 const HeroSection = () => {
   return (
@@ -22,6 +23,7 @@ const HeroSection = () => {
             Get Resume
           </button>
         </div>
+        <PageCount page={1} />
       </div>
     </div>
   );
