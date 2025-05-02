@@ -1,4 +1,3 @@
-import Profile from './Profile1.png'
 import Profile2 from './Profile2.png'
 import JS from './js.png'
 import Bootstrap from './bootstrap.svg'
@@ -8,8 +7,8 @@ import Node from './node.png'
 import Mongodb from './mongodb.svg'
 import Tailwind from './tailwindcss.svg'
 import Background from './background.webp'
+import BackgroundSm from './background-sm.jpg'
 export const assets = {
-    Profile,
     Profile2,
     JS,
     Bootstrap,
@@ -18,6 +17,7 @@ export const assets = {
     Node,
     Mongodb,
     Tailwind,
-    Background
+    Background,
+    BackgroundSm,
 };
   
