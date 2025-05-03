@@ -8,6 +8,7 @@ import Mongodb from './mongodb.svg'
 import Tailwind from './tailwindcss.svg'
 import Background from './background.webp'
 import BackgroundSm from './background-sm.jpg'
+import Git from './git-icon.svg'
 export const assets = {
     Profile2,
     JS,
@@ -19,5 +20,6 @@ export const assets = {
     Tailwind,
     Background,
     BackgroundSm,
-};
+    Git,
+}
   

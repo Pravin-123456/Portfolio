@@ -6,6 +6,7 @@
   box-sizing: border-box;
 }
 
+
 @layer utilities {
   .fade-bottom {
     mask-image: linear-gradient(to bottom, black 70%, transparent 100%);

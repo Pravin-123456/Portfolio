@@ -4,17 +4,18 @@ import PageCount from "../components/PageCount";
 
 const HeroSection = () => {
   return (
-    <div className="relative h-screen w-full overflow-hidden">
-      <img
-        src={assets.BackgroundSm}
-        alt="Background image small"
-        className="absolute h-full object-cover z-0 md:hidden"
-      />
-      <img
+    <div
+      className="relative h-screen w-full overflow-hidden  bg-no-repeat bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${assets.Background})`,
+        backgroundPosition: "65% center",
+      }}
+    >
+      {/* <img
         src={assets.Background}
         alt="Background image"
-        className="absolute h-full w-full object-cover z-0 hidden md:block"
-      />
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      /> */}
 
       <div className="relative ms-8 z-10 flex flex-col justify-center h-full text-white px-4 md:px-16">
         <div className="text-center md:text-start max-w-3xl">
@@ -31,7 +32,7 @@ const HeroSection = () => {
             Get Resume
           </button>
         </div>
-        <PageCount page={1}/>
+        <PageCount page={1} />
       </div>
     </div>
   );
