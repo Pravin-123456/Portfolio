@@ -14,8 +14,8 @@ const App = () => {
         <HeroSection />
         <About />
         <Skills />
-        {/* <Projects /> */}
-        {/* <Contact /> */}
+        <Projects />
+        {/* <Contact />  */}
       </BrowserRouter>
   );
 };

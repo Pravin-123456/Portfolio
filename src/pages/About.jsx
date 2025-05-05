@@ -18,21 +18,23 @@ const About = () => {
               a dedicated Full Stack Developer with a strong grasp of building
               scalable, modern web applications from the ground up.
               <br />
-              <br className="hidden md:block"/>
+              <br className="hidden md:block" />
               <hr className="opacity-20 w-[90%] m-auto md:m-0" />
-              <br className="hidden md:block"/>
+              <br className="hidden md:block" />
               <p>
                 I specialize in JavaScript technologies like React and Node.js,
                 combining clean UI design with powerful backend architecture.
                 I’m passionate about crafting intuitive, high-performance user
                 experiences with clean, maintainable code.
               </p>
-              <br className="hidden md:block"/>
+              <br className="hidden md:block" />
               <hr className="opacity-20 w-[90%] m-auto md:m-0 hidden md:hidden" />
-              <br className="hidden md:block"/>
-              <button className="border p-2 rounded-xl bg-amber-500 text-xl m-2">
-                Get Resume
-              </button>
+              <br className="hidden md:block" />
+              <a href={assets.Resume} download={'PravinKumar_resume.pdf'}>
+                <button className="border p-2 rounded-xl bg-amber-500 hover:bg-[#1d0f26] text-xl m-2 cursor-pointer">
+                  Get Resume
+                </button>
+              </a>
             </h3>
           </div>
           <div className="relative">

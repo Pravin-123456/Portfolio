@@ -11,12 +11,6 @@ const HeroSection = () => {
         backgroundPosition: "65% center",
       }}
     >
-      {/* <img
-        src={assets.Background}
-        alt="Background image"
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      /> */}
-
       <div className="relative ms-8 z-10 flex flex-col justify-center h-full text-white px-4 md:px-16">
         <div className="text-center md:text-start max-w-3xl">
           <h1 className="text-4xl">I am</h1>
@@ -28,9 +22,13 @@ const HeroSection = () => {
               ❛ not my layer ❜
             </span>
           </p>
-          <button className="border border-amber-50 rounded-lg p-3 backdrop-blur-3xl my-3 cursor-pointer">
-            Get Resume
-          </button>
+          <a href={assets.Resume} download={'PravinKumar_resume.pdf'}>
+            <button
+              className="border-2 hover:bg-yellow-400 border-amber-50 rounded-lg p-3 backdrop-blur-3xl my-3 cursor-pointer"
+            >
+              Get Resume
+            </button>
+          </a>
         </div>
         <PageCount page={1} />
       </div>
