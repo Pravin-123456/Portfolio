@@ -3,7 +3,7 @@ import PageCount from "../components/PageCount";
 
 const About = () => {
   return (
-    <div className="relative h-screen bg-gradient-to-br from-[#09030d] via-[#1d0f26] to-[#051321] overflow-hidden">
+    <div className="relative h-screen bg-gradient-to-br from-[#09030d] via-[#1d0f26] to-[#051321] overflow-hidden" id="about">
       <div className="relative top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] w-[85%] h-[85%] md:w-[80%] md:h-[80%] backdrop-blur-xs bg-white/2 border border-white/5 rounded-2xl shadow-lg flex p-5">
         <div className="md:w-1/2 text-center text-white md:mx-20 flex flex-col-reverse md:block">
           <div className="">

@@ -48,7 +48,7 @@ const Hex = ({ image, skill }) => (
 
 const HexGrid = () => {
   return (
-    <div className="h-screen relative flex flex-col items-center justify-center bg-gradient-to-br from-[#200d28] via-[#051321] to-[#0f1b3d] overflow-hidden pt-20">
+    <div className="h-screen relative flex flex-col items-center justify-center bg-gradient-to-br from-[#200d28] via-[#051321] to-[#0f1b3d] overflow-hidden pt-20"  id="skills">
       <h1 className="text-3xl relative -top-6 md:top-20 text-white">SKILLS</h1>
 
       {/* Mobile Screen */}

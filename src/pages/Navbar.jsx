@@ -7,11 +7,11 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   const navLinks = [
-    { to: "/home", label: "Home" },
-    { to: "/about", label: "About" },
-    { to: "/skills", label: "Skills" },
-    { to: "/projects", label: "Projects" },
-    { to: "/contact", label: "Contact" },
+    { to: "#home", label: "Home" },
+    { to: "#about", label: "About" },
+    { to: "#skills", label: "Skills" },
+    { to: "#projects", label: "Projects" },
+    { to: "#contact", label: "Contact" },
   ];
 
   return (
@@ -25,13 +25,13 @@ const Navbar = () => {
         {/* Desktop Links */}
         <ul className="hidden md:flex gap-8">
           {navLinks.map((link, index) => (
-            <Link
+            <a
               key={index}
-              to={link.to}
+              href={link.to}
               className="hover:text-blue-400 transition-colors duration-300"
             >
               {link.label}
-            </Link>
+            </a>
           ))}
         </ul>
       </div>

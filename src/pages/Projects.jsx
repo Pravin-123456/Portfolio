@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import VanillaTilt from "vanilla-tilt";
 import ProjectCard from "../components/ProjectCard";
 import { ProjectInfo } from "../assets/assets";
+import PageCount from "../components/PageCount";
 
 function Tilt({ children }) {
   const tiltRef = useRef(null);
@@ -26,16 +27,20 @@ function Tilt({ children }) {
 
 const Projects = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#09030d] via-[#1d0f26] to-[#051321] text-center py-10">
+    <div id="projects"
+      className="relative min-h-screen bg-gradient-to-br from-[#051321] via-[#061d3c] to-[#0f0727]
+ text-center py-10"
+    >
       <h2 className="text-3xl text-white mb-15">PROJECTS</h2>
       <div className="grid md:mx-50 md:grid-cols-2 lg:grid-cols-3 gap-16 justify-items-center text-white">
         {/* Card 1 */}
-        {ProjectInfo.map((project,index) => (
-        <Tilt key={index}>
-          <ProjectCard {...project} />
-        </Tilt>
+        {ProjectInfo.map((project, index) => (
+          <Tilt key={index}>
+            <ProjectCard {...project} />
+          </Tilt>
         ))}
       </div>
+      <PageCount page={4} />
     </div>
   );
 };

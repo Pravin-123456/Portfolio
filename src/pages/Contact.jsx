@@ -1,80 +1,92 @@
 import React from "react";
+import PageCount from "../components/PageCount";
 
-const Contact = () => {
+const Footer = () => {
+
+  const date = new Date();
+  const year = date.getFullYear();
+
   return (
-    <div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="-11.5 -10.23174 23 20.46348"
-        width="100"
-        height="100"
-        fill="none"
-        stroke="#61DAFB"
-      >
-        <circle cx="0" cy="0" r="2.05" fill="#61DAFB" />
-        <g stroke-width="1" transform="rotate(0)">
-          <ellipse rx="11" ry="4.2" />
-        </g>
-        <g stroke-width="1" transform="rotate(60)">
-          <ellipse rx="11" ry="4.2" />
-        </g>
-        <g stroke-width="1" transform="rotate(120)">
-          <ellipse rx="11" ry="4.2" />
-        </g>
-      </svg>
-    </div>
+    <footer
+      className="relative px-6 md:px-16 lg:px-24 xl:px-32 pt-8 w-full text-gray-300 bg-[#0f0727]"
+      id="contact"
+    >
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-10 border-b border-gray-500/30 pb-6">
+        {/* Logo & Description */}
+        <div className="md:max-w-md md:mx-10">
+          <h1 className="text-xl text-white">Pravin</h1>
+          <p className="mt-6 text-sm leading-relaxed">
+            Trust me — let's grow together and build scalable, impactful web
+            solutions with the power of the MERN stack
+          </p>
+        </div>
+
+        {/* Links & Newsletter */}
+        <div className="flex-1 flex flex-col md:flex-row items-start md:justify-end gap-10">
+          {/* Company Links */}
+          <div>
+            <h2 className="font-semibold mb-5 text-white">Company</h2>
+            <ul className="text-sm space-y-2">
+              <li>
+                <a href="#home" className="hover:text-white">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#about" className="hover:text-white">
+                  About us
+                </a>
+              </li>
+              <li>
+                <a href="#Services" className="hover:text-white">
+                  Services
+                </a>
+              </li>
+              <li>
+                <a href="#skills" className="hover:text-white">
+                  Skills
+                </a>
+              </li>
+              <li>
+                <a href="#projects" className="hover:text-white">
+                  Projects
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          {/* Newsletter Subscription */}
+          <div>
+            <h2 className="font-semibold mb-5 text-white">Contact</h2>
+            <p className="text-sm mb-4">
+              Have questions or thoughts? We'd love to hear from you!{" "}
+            </p>
+            <div className="flex flex-col items-center gap-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="border border-gray-500/30 placeholder-gray-400 outline-none w-full max-w-64 h-9 rounded px-2 bg-transparent text-white"
+              />
+              <input
+                type="text"
+                placeholder="Enter Your Message or Query"
+                className="border border-gray-500/30 placeholder-gray-400 outline-none w-full max-w-64 h-9 rounded px-2 bg-transparent text-white"
+              />
+              <button className="bg-blue-600 w-24 h-9 text-white rounded hover:bg-blue-700 transition-colors">
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Footer Bottom */}
+      <p className="pt-6 text-center text-xs md:text-sm text-gray-400 pb-5">
+        © {year} Company Name. All rights reserved.
+      </p>
+      <PageCount page={5} />
+    </footer>
   );
 };
 
-export default Contact;
-
-
- {/* Top Section: Image/Video container */}
-          // <div
-          //   className="z-50 relative w-[250px] h-[200px] group-hover:w-[270px] transition-all duration-300 ease-in-out backdrop-blur-3xl bg-white/20 overflow-hidden"
-          //   style={{
-          //     clipPath: `path("M 10,0 L 90,0 A 10,10,0,0,1 100,10 L 100,40 A 10,10,0,0,0 110,50 L 240,50 A 10,10,0,0,1 250,60 L 250,190 A 10,10,0,0,1 240,200 L 160,200 A 10,10,0,0,1 150,190 L 150,160 A 10,10,0,0,0 140,150 L 10,150 A 10,10,0,0,1 0,140 L 0,10 A 10,10,0,0,1 10,0 Z")`,
-          //   }}
-          // >
-          //   <img
-          //     src={assets.ProjectImg1}
-          //     alt="Project preview"
-          //     className="absolute inset-0 w-full h-full object-cover object-center z-10 group-hover:hidden"
-          //   />
-          //   <video
-          //     src={assets.ProjectViedo1}
-          //     className="absolute inset-0 w-full h-full object-cover object-center z-0"
-          //     autoPlay
-          //     muted
-          //     loop
-          //     playsInline
-          //   />
-          // </div>
-
-          // {/* Top-right Label */}
-          // <div
-          //   className="z-50 w-[150px] h-[50px] backdrop-blur-3xl bg-white/20 absolute top-0 right-0 group-hover:translate-x-[10px] group-hover:translate-y-[-10px] transition-all duration-300 ease-in-out"
-          //   style={{
-          //     clipPath: `path("M 2,10 A 10,10,0,0,1 10,0 L 140,0 A 10,10,0,0,1 150,10 L 150,40 A 10,10,0,0,1 140,48 L 12,48 A 10,10,0,0,1 2,40 L 2,10 Z")`,
-          //   }}
-          // >
-          //   <h1 className="text-white text-sm font-semibold text-center leading-[50px]">
-          //     PROJECT
-          //   </h1>
-          // </div>
-
-          // {/* Bottom Info Section */}
-          // <div
-          //   className="absolute z-50 -bottom-12.5 w-[250px] h-[200px] backdrop-blur-3xl bg-white/20 group-hover:translate-x-[-10px] group-hover:translate-y-[10px] transition-all duration-300 ease-in-out"
-          //   style={{
-          //     clipPath: `path("M 10,2 L 140,2 A 10,10,0,0,1 148,10 L 148,40 A 10,10,0,0,0 158,52 L 240,52 A 10,10,0,0,1 250,60 L 250,140 A 10,10,0,0,1 240,150 L 10,150 A 10,10,0,0,1 0,140 L 0,10 A 10,10,0,0,1 10,2 Z")`,
-          //   }}
-          // >
-          //   <h1 className="text-white text-start py-5 px-5 text-sm font-medium">
-          //     E-Commerce
-          //   </h1>
-          //   <p className="px-5 text-xs">
-          //     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          //     Molestias, ea.
-          //   </p>
-          // </div>
+export default Footer;

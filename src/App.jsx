@@ -6,6 +6,7 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Skills from "./pages/Skills";
+import Services from "./pages/Services";
 
 const App = () => {
   return (
@@ -15,7 +16,8 @@ const App = () => {
         <About />
         <Skills />
         <Projects />
-        {/* <Contact />  */}
+        <Services />
+        <Contact /> 
       </BrowserRouter>
   );
 };
