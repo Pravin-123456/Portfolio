@@ -73,7 +73,7 @@ const Footer = () => {
                 className="border border-gray-500/30 placeholder-gray-400 outline-none w-full max-w-64 h-9 rounded px-2 bg-transparent text-white"
               />
               <button className="bg-blue-600 w-24 h-9 text-white rounded hover:bg-blue-700 transition-colors">
-                Subscribe
+                Send
               </button>
             </div>
           </div>

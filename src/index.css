@@ -4,16 +4,16 @@
 * {
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
-
 
 @layer utilities {
   .fade-bottom {
     mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
   }
+
   .preserve-3d {
-    transform-style: 'preserve-3d',
+    transform-style: preserve-3d;
   }
 }
-

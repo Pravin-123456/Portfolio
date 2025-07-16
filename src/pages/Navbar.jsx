@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Menu } from "lucide-react";
-
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
@@ -15,7 +14,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="text-white w-full fixed top-0 left-0 px-5 md:px-24 py-5 z-50" >
+    <div className="text-white w-full fixed top-0 left-0 px-5 md:px-24 py-5 z-50 bg-transparent">
       <div className="flex justify-between items-center">
         <h1 className="font-bold text-xl">PRAVIN</h1>
         <Menu
@@ -47,14 +46,21 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
           >
             {navLinks.map((link, index) => (
-              <a
+              <motion.li
                 key={index}
-                to={link.to}
-                className="hover:text-blue-400 transition-colors duration-300"
-                onClick={() => setToggle(false)}
+                initial={{ opacity: 0, x: -10 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -10 }}
+                transition={{ duration: 0.2, delay: index * 0.05 }}
               >
-                {link.label}
-              </a>
+                <a
+                  href={link.to}
+                  onClick={() => setToggle(false)}
+                  className="hover:text-blue-400 transition-colors duration-300 block"
+                >
+                  {link.label}
+                </a>
+              </motion.li>
             ))}
           </motion.ul>
         )}
