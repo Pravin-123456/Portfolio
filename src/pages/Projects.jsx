@@ -1,8 +1,6 @@
 import { useEffect, useRef, memo, lazy, Suspense } from "react";
 import VanillaTilt from "vanilla-tilt";
-// import ProjectCard from "../components/ProjectCard";
 import { ProjectInfo } from "../assets/assets";
-// import PageCount from "../components/PageCount";
 
 const PageCount = lazy(() => import("../components/PageCount"));
 const ProjectCard = lazy(() => import("../components/ProjectCard"));
@@ -13,13 +11,20 @@ const tiltOptions = {
   max: 15,
 };
 
+// Reusable fallback component
+const Fallback = () => <p className="text-white">Loading...</p>;
+
 const Tilt = memo(({ children }) => {
   const tiltRef = useRef(null);
 
   useEffect(() => {
-    if (tiltRef.current) {
-      VanillaTilt.init(tiltRef.current, tiltOptions);
+    const currentRef = tiltRef.current;
+    if (currentRef) {
+      VanillaTilt.init(currentRef, tiltOptions);
     }
+    return () => {
+      currentRef?.vanillaTilt?.destroy();
+    };
   }, []);
 
   return (
@@ -41,15 +46,23 @@ const Projects = () => {
       <h2 className="mb-10 text-3xl text-white">PROJECTS</h2>
 
       <div className="grid md:mx-50 justify-items-center gap-16 md:grid-cols-2 lg:grid-cols-3 px-6 text-white">
-        {ProjectInfo.map((project, index) => (
+        {ProjectInfo.map(({ img, video, title, type, des, url }, index) => (
           <Tilt key={index}>
-            <Suspense fallback={<p>loading..</p>}>
-              <ProjectCard {...project} />
+            <Suspense fallback={<Fallback />}>
+              <ProjectCard
+                img={img}
+                video={video}
+                title={title}
+                type={type}
+                des={des}
+                url={url}
+              />
             </Suspense>
           </Tilt>
         ))}
       </div>
-      <Suspense fallback={<p>loading...</p>}>
+
+      <Suspense fallback={<Fallback />}>
         <PageCount page={4} />
       </Suspense>
     </section>
