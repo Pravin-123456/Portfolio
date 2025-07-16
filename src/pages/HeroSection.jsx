@@ -1,10 +1,18 @@
-import React from "react";
+// import React, { useEffect } from "react";
 import { assets } from "../assets/assets";
 import PageCount from "../components/PageCount";
 
+
+
 const HeroSection = () => {
+  // useEffect(() => {
+  //   const bg = new Image();
+  //   bg.src = assets.Background;
+  // }, []);
+
   return (
-    <div id="home"
+    <div
+      id="home"
       className="relative h-screen w-full overflow-hidden  bg-no-repeat bg-cover bg-center"
       style={{
         backgroundImage: `url(${assets.Background})`,
@@ -22,10 +30,8 @@ const HeroSection = () => {
               ❛ not my layer ❜
             </span>
           </p>
-          <a href={assets.Resume} download={'PravinKumar_resume.pdf'}>
-            <button
-              className="border-2 hover:bg-yellow-400 border-amber-50 rounded-lg p-3 backdrop-blur-3xl my-3 cursor-pointer"
-            >
+          <a href={assets.Resume} download={"PravinKumar_resume.pdf"}>
+            <button className="border-2 hover:bg-yellow-400 border-amber-50 rounded-lg p-3 backdrop-blur-3xl my-3 cursor-pointer">
               Get Resume
             </button>
           </a>

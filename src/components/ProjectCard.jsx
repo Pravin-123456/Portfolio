@@ -18,10 +18,12 @@ const ProjectCard = ({ img, video, title, type, des, url }) => {
           <img
             src={img}
             alt="Project preview"
+            loading="eager"
             className="absolute inset-0 w-full h-full object-cover object-center z-10 group-hover:hidden"
           />
           <video
             src={video}
+            preload="auto"
             className="absolute inset-0 w-full h-full object-cover object-center z-0"
             autoPlay
             muted
@@ -59,4 +61,4 @@ const ProjectCard = ({ img, video, title, type, des, url }) => {
   );
 };
 
-export default ProjectCard;
+export default React.memo(ProjectCard);

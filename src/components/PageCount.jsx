@@ -8,4 +8,4 @@ const PageCount = ({ page }) => {
   );
 };
 
-export default PageCount;
+export default React.memo(PageCount);

@@ -1,25 +1,34 @@
-import Profile2 from "./Profile2.webp";
-import JS from "./js.svg";
-import Bootstrap from "./bootstrap.svg";
-import React from "./react.svg";
-import Express from "./expressjs.svg";
-import Node from "./node.svg";
-import Mongodb from "./mongodb.svg";
-import Tailwind from "./tailwindcss.svg";
-import Background from "./background.webp";
-import Git from "./git-icon.svg";
-import Resume from "./PravinKumar-ATS-Resume.pdf";
-import Grosy_img from "./Project_img/Grosy.webp";
-import Grosy_video from "./Project_video/Grosy.mp4";
-import Coffee_img from "./Project_img/Coffeeday.webp";
-import Coffee_video from "./Project_video/CoffeeDay.mp4";
-import Car_img from "./Project_img/car.webp";
-import Car_video from "./Project_video/Cars.mp4";
-import Fruit_img from "./Project_img/fruitShop.webp";
-import Fruit_video from "./Project_video/fruitShop.mp4";
-import Tuf_img from "./Project_img/TufGaming.webp";
-import Tuf_video from "./Project_video/TufGaming.mp4";
+// CDN Base
+const CDN = "https://cdn.jsdelivr.net/gh/Pravin-123456/Portfolio@assets/src/assets";
 
+// Individual asset URLs
+const Profile2 = `${CDN}/Profile2.webp`;
+const JS = `${CDN}/js.svg`;
+const Bootstrap = `${CDN}/bootstrap.svg`;
+const React = `${CDN}/react.svg`;
+const Express = `${CDN}/expressjs.svg`;
+const Node = `${CDN}/node.svg`;
+const Mongodb = `${CDN}/mongodb.svg`;
+const Tailwind = `${CDN}/tailwindcss.svg`;
+const Background = `${CDN}/background.webp`;
+const Git = `${CDN}/git-icon.svg`;
+const Resume = `${CDN}/PravinKumar-ATS-Resume.pdf`;
+
+// Project Images
+const Grosy_img = `${CDN}/Project_img/Grosy.webp`;
+const Coffee_img = `${CDN}/Project_img/Coffeeday.webp`;
+const Car_img = `${CDN}/Project_img/car.webp`;
+const Tuf_img = `${CDN}/Project_img/TufGaming.webp`;
+const Fruit_img = `${CDN}/Project_img/fruitShop.webp`;
+
+// Project Videos
+const Grosy_video = `${CDN}/Project_video/Grosy.mp4`;
+const Coffee_video = `${CDN}/Project_video/CoffeeDay.mp4`;
+const Car_video = `${CDN}/Project_video/Cars.mp4`;
+const Tuf_video = `${CDN}/Project_video/TufGaming.mp4`;
+const Fruit_video = `${CDN}/Project_video/fruitShop.mp4`;
+
+// Export assets object
 export const assets = {
   Profile2,
   JS,
@@ -34,6 +43,7 @@ export const assets = {
   Resume,
 };
 
+// Export project information
 export const ProjectInfo = [
   {
     img: Grosy_img,
@@ -77,17 +87,18 @@ export const ProjectInfo = [
   },
 ];
 
+// Export service information
 export const service = [
-    {
-        name:'Frontend',
-        des:'We design responsive, modern interfaces with HTML, CSS, JavaScript, and React to deliver smooth user experiences.'
-    },
-    {
-        name:'Backend',
-        des:'Specializing in backend development, I build reliable APIs and high-performance infrastructures tailored to client needs.'
-    },
-    {
-        name:'Mern',
-        des:'Specializing in MERN stack development, I build dynamic web apps with robust APIs and high-performance, scalable infrastructure.'
-    }
+  {
+    name: "Frontend",
+    des: "We design responsive, modern interfaces with HTML, CSS, JavaScript, and React to deliver smooth user experiences.",
+  },
+  {
+    name: "Backend",
+    des: "Specializing in backend development, I build reliable APIs and high-performance infrastructures tailored to client needs.",
+  },
+  {
+    name: "Mern",
+    des: "Specializing in MERN stack development, I build dynamic web apps with robust APIs and high-performance, scalable infrastructure.",
+  },
 ];

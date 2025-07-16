@@ -1,8 +1,11 @@
-import React, { useEffect, useRef, memo } from "react";
+import { useEffect, useRef, memo, lazy, Suspense } from "react";
 import VanillaTilt from "vanilla-tilt";
-import ProjectCard from "../components/ProjectCard";
+// import ProjectCard from "../components/ProjectCard";
 import { ProjectInfo } from "../assets/assets";
-import PageCount from "../components/PageCount";
+// import PageCount from "../components/PageCount";
+
+const PageCount = lazy(() => import("../components/PageCount"));
+const ProjectCard = lazy(() => import("../components/ProjectCard"));
 
 const tiltOptions = {
   scale: 1.01,
@@ -40,12 +43,15 @@ const Projects = () => {
       <div className="grid md:mx-50 justify-items-center gap-16 md:grid-cols-2 lg:grid-cols-3 px-6 text-white">
         {ProjectInfo.map((project, index) => (
           <Tilt key={index}>
-            <ProjectCard {...project} />
+            <Suspense fallback={<p>loading..</p>}>
+              <ProjectCard {...project} />
+            </Suspense>
           </Tilt>
         ))}
       </div>
-
-      <PageCount page={4} />
+      <Suspense fallback={<p>loading...</p>}>
+        <PageCount page={4} />
+      </Suspense>
     </section>
   );
 };

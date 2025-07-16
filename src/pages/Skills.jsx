@@ -1,7 +1,8 @@
+import { memo } from "react";
 import { assets } from "../assets/assets";
 import PageCount from "../components/PageCount";
 
-const Hex = ({ image, skill }) => (
+const Hex = memo(({ image, skill }) => (
   <div className="w-25 h-25 md:w-55 md:h-55 relative -rotate-[30deg]">
     <svg viewBox="0 0 100 100" className="w-full h-full">
       <defs>
@@ -22,13 +23,14 @@ const Hex = ({ image, skill }) => (
         <img
           src={image}
           alt={skill}
+          loading="eager"
           className="md:w-20 md:h-20 w-10 h-10 m-1"
         />
         <p className="text-sm md:text-xl text-white text-center">{skill}</p>
       </div>
     )}
   </div>
-);
+));
 
 <div className="w-[90px] h-[115px] md:w-55 md:h-55 relative -rotate-[30deg]">
   <svg viewBox="0 0 100 100" className="w-full h-full">

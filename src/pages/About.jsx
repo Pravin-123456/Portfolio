@@ -30,7 +30,7 @@ const About = () => {
               <br className="hidden md:block" />
               <hr className="opacity-20 w-[90%] m-auto md:m-0 hidden md:hidden" />
               <br className="hidden md:block" />
-              <a href={assets.Resume} download={'PravinKumar_resume.pdf'}>
+              <a href={assets.Resume} download={assets.Resume}>
                 <button className="border p-2 rounded-xl bg-amber-500 hover:bg-[#1d0f26] text-xl m-2 cursor-pointer">
                   Get Resume
                 </button>
@@ -41,6 +41,7 @@ const About = () => {
             <img
               src={assets.Profile2}
               alt="about"
+              loading="lazy"
               className="absolute w-[300px] left-1/2 -top-60 md:-top-0 -translate-x-1/2 md:w-[500px]  md:-left-1/2 md:translate-x-[170%] md:-translate-y-[90%] fade-bottom"
             />
           </div>

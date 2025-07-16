@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { RxHamburgerMenu } from "react-icons/rx";
+import { Menu } from "lucide-react";
+
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
@@ -18,7 +18,7 @@ const Navbar = () => {
     <div className="text-white w-full fixed top-0 left-0 px-5 md:px-24 py-5 z-50" >
       <div className="flex justify-between items-center">
         <h1 className="font-bold text-xl">PRAVIN</h1>
-        <RxHamburgerMenu
+        <Menu
           className="md:hidden cursor-pointer text-2xl"
           onClick={() => setToggle((prev) => !prev)}
         />
@@ -47,14 +47,14 @@ const Navbar = () => {
             transition={{ duration: 0.3 }}
           >
             {navLinks.map((link, index) => (
-              <Link
+              <a
                 key={index}
                 to={link.to}
                 className="hover:text-blue-400 transition-colors duration-300"
                 onClick={() => setToggle(false)}
               >
                 {link.label}
-              </Link>
+              </a>
             ))}
           </motion.ul>
         )}
