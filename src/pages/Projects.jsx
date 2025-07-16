@@ -1,36 +1,53 @@
-import { useEffect, useRef, memo, lazy, Suspense } from "react";
+import { useEffect, useRef, memo, lazy, Suspense, useState } from "react";
 import VanillaTilt from "vanilla-tilt";
 import { ProjectInfo } from "../assets/assets";
 
+// Lazy-loaded components
 const PageCount = lazy(() => import("../components/PageCount"));
 const ProjectCard = lazy(() => import("../components/ProjectCard"));
 
-const tiltOptions = {
-  scale: 1.01,
-  speed: 500,
-  max: 15,
-};
-
-// Reusable fallback component
+// Reusable loading fallback
 const Fallback = () => <p className="text-white">Loading...</p>;
 
+// Tilt options
+const tiltOptions = {
+  scale: 1.01,
+  speed: 300,
+  max: 10,
+  gyroscope: true,
+  gyroscopeSamples: 5,
+};
+
+// Tilt wrapper with optimizations
 const Tilt = memo(({ children }) => {
   const tiltRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const currentRef = tiltRef.current;
-    if (currentRef) {
-      VanillaTilt.init(currentRef, tiltOptions);
-    }
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    const ref = tiltRef.current;
+    const timer = setTimeout(() => {
+      if (ref) VanillaTilt.init(ref, tiltOptions);
+    }, 100);
+
     return () => {
-      currentRef?.vanillaTilt?.destroy();
+      clearTimeout(timer);
+      ref?.vanillaTilt?.destroy();
+      window.removeEventListener("resize", checkMobile);
     };
   }, []);
 
   return (
     <div
       ref={tiltRef}
-      className="box h-[300px] w-[250px] relative bottom-3 rounded-xl group backdrop-blur-3xl shadow-2xl backface-hidden antialiased preserve-3d"
+      className={`box h-[300px] w-[250px] relative bottom-3 rounded-xl group 
+        ${isMobile ? "shadow-md" : "backdrop-blur-3xl shadow-2xl backface-hidden preserve-3d"} 
+        will-change-transform`}
     >
       {children}
     </div>
