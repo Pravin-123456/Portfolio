@@ -1,0 +1,17 @@
+[33m94929ce[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m add favicon cdn
+[33m4e292f3[m Performance Gains in projects page
+[33m877478a[m remove the assets, insted put cdn's
+[33m993f181[m optimize the projects page
+[33mbcbfe91[m update node packages and optimized
+[33mef5d896[m[33m ([m[1;32massets[m[33m)[m optimize the projects component
+[33m8efcbab[m add myservice hedding and pagecount fixed
+[33m74bc346[m create service and contact page and added to main page
+[33mb4d350b[m change the tab name and add fevicon
+[33m466d76a[m card car video fixed
+[33meb02b52[m fix the assets file
+[33m1638020[m the Projects page created and responsive for all screens
+[33m66c8099[m skills page created
+[33m85b79aa[m fix the herosection and about page images for all screen
+[33m5dea101[m fix navbar
+[33m7c7e107[m about page created
+[33m8020907[m first commit
